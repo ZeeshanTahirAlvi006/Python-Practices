@@ -1,5 +1,5 @@
 balance = 1000.0
-
+#function to deposit cash
 def deposit(amount):
     global balance
     if amount > 0:
@@ -7,6 +7,7 @@ def deposit(amount):
         print(f"Successfully deposited ${amount}")
     else:
         print("Error: Deposit amount must be positive.")
+#function to withdraw cash
 def withdraw(amount):
     global balance
     if amount > balance:
@@ -16,9 +17,10 @@ def withdraw(amount):
     else:
         balance -= amount
         print(f"Successfully withdrew ${amount}")
+#function to check balance
 def check_balance():
     print(f"Current Balance: ${balance}")
-
+#function to start bank
 def start_banking():
     print("Zeeshan's Bank - Welcome!")
     
@@ -44,6 +46,7 @@ def start_banking():
         except ValueError:
             print("Invalid input! Please enter a numeric value.")
         print(f"Updated Balance: ${balance}")
+#function to get grade
 def get_grade(average):
     if average >= 85:
         return "A"
@@ -53,12 +56,12 @@ def get_grade(average):
         return "C"
     else:
         return "F"
-
+#function to analyze performance
 def analyze_performance():
     marks_list = []
     subject_count = 5
     
-    print(f"--- Student Grade Analyzer (Input {subject_count} Subjects) ---")
+    print(f"Student Grade Analyzer (Input {subject_count} Subjects)")
     
     i = 1
     while len(marks_list) < subject_count:
@@ -82,6 +85,7 @@ def analyze_performance():
     print("\nResults")
     print(f"Average Marks: {format_score(average_marks)}")
     print(f"Final Grade: {final_grade}")
+
 
 start_banking()
 analyze_performance()
