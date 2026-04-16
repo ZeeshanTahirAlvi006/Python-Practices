@@ -75,11 +75,20 @@ def smart_number_analyzer():
 
         except ValueError:
             print("Invalid Input! Try Again.")
-# smart_number_analyzer()
+smart_number_analyzer()
 def student_dictionary_system():
-    while True:
-        try:
-            li = input("Enter ")
+    subjects = ["Math", "Science", "English", "History", "Art"]
+    try:
+        li = [input(f"Enter student {i} name: ") for i in range(1,6)]
+        for name in li:
+            print(f"Student Name: {name}")
+            dict = {subjects[i-1]: int(input(f"Enter marks for {subjects[i-1]}: ")) for i in range(1,6)}
+        print("\nStudent Subjects and Marks:")
+        for name in li:
+            print(f"\n{name}'s Marks:")
+            for subject, marks in dict.items():
+                print(f"{subject}: {marks}")
 
-        except ValueError:
-            print("Invalid Input! Try Again.")
+    except ValueError:
+        print("Invalid Input! Try Again.")
+# student_dictionary_system()
