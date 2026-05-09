@@ -1,0 +1,3 @@
+Ali: 75
+Ahmed: 85
+Sara: 90
