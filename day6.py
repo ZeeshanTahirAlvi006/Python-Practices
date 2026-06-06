@@ -23,7 +23,7 @@ arr5 = np.array([[[1,2,3],[2,3,4]],[[1,2,3],[2,3,4]],[[1,2,3],[2,3,4]],[[1,2,3],
 arr6 = np.arange(1,13).reshape(2,2,3)
 # print(arr6)
 # print(arr6[0,1,:3])
-for i in arr6:
-    for j in i:
-        for k in j:
-            print(k)
+# for i in arr6:
+#     for j in i:
+#         for k in j:
+#             print(k)
